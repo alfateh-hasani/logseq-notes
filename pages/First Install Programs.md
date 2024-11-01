@@ -1,4 +1,4 @@
-- GIt
+- Git
 - VS Code
 - Laragon
 - Php
