@@ -1,1 +1,9 @@
-- 1-
+- GIt
+- VS Code
+- Laragon
+- Php
+- PhpMyAmdin
+- Node
+- Postman
+- Table Plus
+-
