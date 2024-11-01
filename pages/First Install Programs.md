@@ -6,4 +6,11 @@
 - Node
 - Postman
 - Table Plus
+- Google chrome
+- Firefox
+- DBeaver
+- PotPlayer
+- XMind
+- Android Studio
+- LDPlayer
 -
