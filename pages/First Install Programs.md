@@ -13,4 +13,5 @@
 - XMind
 - Android Studio
 - LDPlayer
+- Flutter SDK
 -
