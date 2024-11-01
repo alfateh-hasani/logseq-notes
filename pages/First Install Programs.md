@@ -3,6 +3,7 @@
 - Laragon
 - Php
 - PhpMyAmdin
+- Python
 - Node
 - Postman
 - Table Plus
