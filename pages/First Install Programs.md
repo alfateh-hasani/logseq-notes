@@ -6,6 +6,7 @@
 - Python
 - Node
 - Postman
+- ApiDog
 - Table Plus
 - Google chrome
 - Firefox
@@ -17,4 +18,6 @@
 - LDPlayer
 - Flutter SDK
 - Draw.io
-- Internet Download Manager ()
+- Internet Download Manager (Repacks)
+- LogSeq
+-
