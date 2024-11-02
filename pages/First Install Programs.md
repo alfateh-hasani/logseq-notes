@@ -2,6 +2,8 @@
 - VS Code
 - Laragon
 - Php
+- xampp
+- PHPStorm
 - PhpMyAmdin
 - Python
 - Node
