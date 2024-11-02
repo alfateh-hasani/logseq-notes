@@ -7,11 +7,11 @@
 - Node
 - Postman
 - ApiDog
-- Table Plus
 - Google chrome
 - Firefox
 - Firefox Developer
 - DBeaver
+- Table Plus
 - PotPlayer
 - XMind
 - Android Studio
@@ -20,4 +20,6 @@
 - Draw.io
 - Internet Download Manager (Repacks)
 - LogSeq
--
+- PotPlayer
+- Supremo
+- Telegram
