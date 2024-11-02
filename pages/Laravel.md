@@ -7,6 +7,14 @@
 -
 - Install Laravel Globally
   composer global require laravel/installer
+- create project
+  
+  ```php
+  laravel new example-app
+  ```
 - ## Start Inertia Project
+  
+  ```php
+  ```
 - ```php
   ```
