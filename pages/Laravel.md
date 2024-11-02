@@ -5,6 +5,7 @@
 	  composer require "spatie/laravel-medialibrary"
 	  ```
 -
+- Install
 - ## Start Inertia Project
 - ```php
   ```
