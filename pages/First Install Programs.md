@@ -9,6 +9,7 @@
 - Table Plus
 - Google chrome
 - Firefox
+- Firefox Developer
 - DBeaver
 - PotPlayer
 - XMind
@@ -16,3 +17,4 @@
 - LDPlayer
 - Flutter SDK
 - Draw.io
+- Internet Download Manager ()
