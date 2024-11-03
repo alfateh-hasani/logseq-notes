@@ -5,6 +5,7 @@
 		  ```
 		  User-agent: *
 		  Disallow: /
+		  
 		  ```
 	- ### Blocking indexing
 		- Meta tag in html
@@ -29,5 +30,5 @@
 		  
 		  ```shell
 		  htpasswd -c /path/to/.htpasswd username
-		  
 		  ```
+			- path to
