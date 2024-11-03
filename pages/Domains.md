@@ -2,5 +2,8 @@
 	- ### Prevent Crawling
 		- create robots.txt 
 		  
-		              User-agent: *
-		               Disallow: /
+		  ```
+		  User-agent: *
+		  Disallow: /
+		  ```
+	- ###
