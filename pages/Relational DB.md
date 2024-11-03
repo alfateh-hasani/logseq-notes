@@ -14,7 +14,8 @@
 	- **Entity Integrity**: Ensures each row in a table is uniquely identifiable by a primary key, and the primary key cannot have null values.
 	- **Referential Integrity**: Maintains relationships between tables by ensuring foreign key values in one table match the primary key values in another table.
 	- **Domain Integrity**: Enforces valid entries for a given column by restricting the data type, format, and range of values that can be stored.
--
+- ## Atomic Values
+	- In database design, it's important to store atomic values, which means storing the smallest pieces of information that cannot be further divided. This principle helps maintain data integrity and avoid redundancy.
 -
 - ## Data Integrity
 	- Data integrity refers to the accuracy, consistency, and reliability of data stored in a database.
