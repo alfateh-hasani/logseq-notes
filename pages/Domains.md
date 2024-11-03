@@ -18,6 +18,8 @@
 	- ### Password Protection
 		- Lock domain with username and password
 			- using cPanel
-			  From Directory Privacy 
-			  - choose root directory 
-			  -
+			- From Directory Privacy
+			- choose root directory
+			- create user name
+			- create password
+			-
