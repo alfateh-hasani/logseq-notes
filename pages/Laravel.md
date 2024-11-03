@@ -21,4 +21,12 @@
 - ## Create Laravel Project
 - ### Inertia Project
 	- ### inertia
-	-
+	- server side
+	  
+	  ```shell
+	  composer require inertiajs/inertia-laravel
+	  ```
+	  
+	  ```php
+	  ```
+-
