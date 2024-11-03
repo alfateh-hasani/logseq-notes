@@ -6,5 +6,8 @@
 	- A Relational Database Management System (RDBMS) is a software application designed to create, manage, and interact with relational databases.
 	- F.X: MySQL, PostgreSQL, Oracle, and Microsoft SQL Server
 - ## Introduction to SQL
-  
-  SQL (Structured Query Language) is the standard programming language used to interact with relational databases. It allows you to create, read, update, and delete data within the database, as well as define and modify the database structure itself. SQL is like a universal language that enables you to communicate with different RDBMS platforms.
+	- SQL (Structured Query Language) is the standard programming language used to interact with relational databases. It allows you to create, read, update, and delete data within the database, as well as define and modify the database structure itself. SQL is like a universal language that enables you to communicate with different RDBMS platforms.
+- ## Naming Conventions
+	- In SQL, following consistent naming conventions is crucial for clarity and maintainability
+- ## What is Database Design?
+	- Database design is the process of creating an efficient and organized structure for storing and managing data in a database.
