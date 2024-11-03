@@ -26,4 +26,8 @@
 					- create password
 			-
 		- Using .htpasswd 
-		  cod
+		  
+		  ```shell
+		  htpasswd -c /path/to/.htpasswd username
+		  
+		  ```
