@@ -17,3 +17,7 @@
 		  ```
 	- ### Password Protection
 		- Lock domain with username and password
+			- using cPanel
+			  From Directory Privacy 
+			  - choose root directory 
+			  -
