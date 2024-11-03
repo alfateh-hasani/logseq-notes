@@ -25,4 +25,5 @@
 					- create user name
 					- create password
 			-
-		-
+		- Using .htpasswd 
+		  cod
