@@ -16,6 +16,10 @@
 	- **Domain Integrity**: Enforces valid entries for a given column by restricting the data type, format, and range of values that can be stored.
 - ## Atomic Values
 	- In database design, it's important to store atomic values, which means storing the smallest pieces of information that cannot be further divided. This principle helps maintain data integrity and avoid redundancy.
+- ## Introduction to Keys
+- Keys are essential components in database design that help ensure data integrity and establish relationships between tables.
+-
+-
 -
 - ## Data Integrity
 	- Data integrity refers to the accuracy, consistency, and reliability of data stored in a database.
