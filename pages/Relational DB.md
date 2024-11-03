@@ -22,5 +22,7 @@
 	- Keys are essential components in database design that help ensure data integrity and establish relationships between tables.
 - ## Primary Key Index
 	- A primary key is a column or a combination of columns that uniquely identifies each record in a table.
--
+- ## Look up Table
+	- like Categories -> products
+	- A lookup table, also known as a reference table or a code table, is a table that contains predefined sets of values that can be used to populate columns in other tables.
 -
