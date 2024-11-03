@@ -15,4 +15,5 @@
 		    <!-- Other head elements -->
 		  </head>
 		  ```
-	-
+	- ### Password Protection
+		- Lock domain with username and password
