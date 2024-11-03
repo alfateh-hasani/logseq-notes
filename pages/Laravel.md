@@ -21,4 +21,6 @@
 - ## Create Laravel Project
 - ### Inertia Project
 	- ### inertia
+		- [Install server side](https://inertiajs.com/server-side-setup)
+		- [Install Client Side](https://inertiajs.com/client-side-setup)
 	-
