@@ -31,4 +31,5 @@
 		  ```shell
 		  htpasswd -c /path/to/.htpasswd username
 		  ```
-			- path to
+			- /path/to/.htpasswd :- path to place out of root directory
+			- username :- create user name
