@@ -48,3 +48,5 @@
 		      ]);
 		  })
 		  ```
+	- Client Side
+		- npm install @inertiajs/vue3
