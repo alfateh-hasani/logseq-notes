@@ -38,8 +38,5 @@
 	    </body>
 	  </html>
 	  ```
-	  
-	  ```shell
-	  php artisan inertia:middleware
-	  ```
+	-
 -
