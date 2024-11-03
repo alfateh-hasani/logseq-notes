@@ -11,3 +11,10 @@
 	- In SQL, following consistent naming conventions is crucial for clarity and maintainability
 - ## What is Database Design?
 	- Database design is the process of creating an efficient and organized structure for storing and managing data in a database.
+	- **Entity Integrity**: Ensures each row in a table is uniquely identifiable by a primary key, and the primary key cannot have null values.
+	- **Referential Integrity**: Maintains relationships between tables by ensuring foreign key values in one table match the primary key values in another table.
+	- **Domain Integrity**: Enforces valid entries for a given column by restricting the data type, format, and range of values that can be stored.
+-
+-
+- ## Data Integrity
+	- Data integrity refers to the accuracy, consistency, and reliability of data stored in a database.
