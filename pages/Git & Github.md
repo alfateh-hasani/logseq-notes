@@ -27,7 +27,7 @@
 	  ```shell
 	  git init	
 	  ```
-- ## git commands
+- ## Basic git commands
 	- ### git status of files
 	  
 	  ```shell
@@ -48,7 +48,11 @@
 	  ```shell
 	  git rm --cached [file path/filename]
 	  ```
-	-
+	- remove from staging
+	  
+	  ```shell
+	  git restore --staged [file path/ filename]
+	  ```
 	- remove changes in file
 	- ```shell
 	  git restore [file path/filename]
@@ -70,4 +74,9 @@
 	  ```shell
 	  git diff
 	  ```
-	-
+	- Stage and commit 
+	  
+	  ```shell
+	  git commit -a -m "[message for all files]"
+	  ```
+-
