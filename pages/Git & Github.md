@@ -96,7 +96,11 @@
 	  git reset [hash code of commit from log]
 	  ```
 - ## Advaced commands
-	- ### Rebase (Change order, merge, squash, ...) commits
+	- ### Rebase (Change order, merge, squash, ...) commits 
+	  
+	  ```shell
+	  git rebase -i --root
+	  ```
 - ## general command
 	- ### remove file
 	  
