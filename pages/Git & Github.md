@@ -79,4 +79,5 @@
 	  ```shell
 	  git commit -a -m "[message for all files]"
 	  ```
--
+- ## general command
+	- ### git rm "[]"
