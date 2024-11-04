@@ -38,7 +38,11 @@
 	  ```shell
 	  git add [file path/filename]
 	  ```
-	- git all
+	- track all files
+	  
+	  ```shell
+	  git all .
+	  ```
 	- untrack file
 	  
 	  ```shell
@@ -55,5 +59,10 @@
 	  ```shell
 	  # ignore all .txt files
 	  *.txt
+	  ```
+	- to commit all tracked files
+	  
+	  ```shell
+	  git commit -m "[message for all files]"
 	  ```
 	-
