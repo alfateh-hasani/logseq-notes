@@ -38,4 +38,22 @@
 	  ```shell
 	  git add [file path/filename]
 	  ```
+	- git all
+	- untrack file
+	  
+	  ```shell
+	  git rm --cached [file path/filename]
+	  ```
+	  or use 
+	  
+	  ```shell
+	  git restore [file path/filename]
+	  ```
+	- ignore file create file .gitignore
+	  both ways are correct
+	  
+	  ```shell
+	  # ignore all .txt files
+	  *.txt
+	  ```
 	-
