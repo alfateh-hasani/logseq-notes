@@ -99,7 +99,9 @@
 		- create branche
 		  
 		  ```shell
+		  git branch [name]
 		  ```
+		-
 - ## Advaced commands
 	- ### Rebase (Change order, merge, squash, ...) commits 
 	  
