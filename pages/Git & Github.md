@@ -95,6 +95,11 @@
 	  ```shell
 	  git reset [hash code of commit from log]
 	  ```
+	- ### Branches
+		- create branche
+		  
+		  ```shell
+		  ```
 - ## Advaced commands
 	- ### Rebase (Change order, merge, squash, ...) commits 
 	  
