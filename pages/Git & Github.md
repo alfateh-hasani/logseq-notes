@@ -90,8 +90,13 @@
 	  ```shell
 	  git commit -m "[New message]" --amend
 	  ```
+	- ### Return to previous commit 
+	  
+	  ```shell
+	  git reset [hash code of commit from log]
+	  ```
 - ## Advaced commands
-	-
+	- ### Rebase (Change order, merge, squash, ...) commits
 - ## general command
 	- ### remove file
 	  
