@@ -53,7 +53,7 @@
 	  ```shell
 	  git restore --staged [file path/ filename]
 	  ```
-	- ### remove changes in file
+	- ### remove changes in file, recover deleted file
 	  ```shell
 	  git restore [file path/filename]
 	  ```
