@@ -111,7 +111,11 @@
 		  ```shell
 		  git switch [name]
 		  ```
-		-
+		- Merge changes from branch to current branch
+		  
+		  ```shell
+		  git merge -m "[Message of merge]"
+		  ```
 		-
 		-
 - ## Advaced commands
