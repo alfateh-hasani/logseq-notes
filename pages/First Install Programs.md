@@ -1,0 +1,27 @@
+- Git
+- VS Code
+- Laragon
+- Php
+- xampp
+- PHPStorm
+- PhpMyAmdin
+- Python
+- Node
+- Postman
+- ApiDog
+- Google chrome
+- Firefox
+- Firefox Developer
+- DBeaver
+- Table Plus
+- PotPlayer
+- XMind
+- Android Studio
+- LDPlayer
+- Flutter SDK
+- Draw.io
+- Internet Download Manager (Repacks)
+- LogSeq
+- PotPlayer
+- Supremo
+- Telegram
