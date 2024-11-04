@@ -79,6 +79,19 @@
 	  ```shell
 	  git commit -a -m "[message for all files]"
 	  ```
+	- ### Review Log , blog as one line
+	  
+	  ```git log
+	  git log
+	  git log --oneline
+	  ```
+	- ### Change message of last commit
+	  
+	  ```shell
+	  git commit -m "[New message]" --amend
+	  ```
+- ## Advaced commands
+	-
 - ## general command
 	- ### remove file
 	  
