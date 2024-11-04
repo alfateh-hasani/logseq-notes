@@ -33,12 +33,12 @@
 	  ```shell
 	  git status
 	  ```
-	- track file
+	- track file (Stagin)
 	  
 	  ```shell
 	  git add [file path/filename]
 	  ```
-	- track all files
+	- track all files (Staging)
 	  
 	  ```shell
 	  git all .
@@ -48,9 +48,9 @@
 	  ```shell
 	  git rm --cached [file path/filename]
 	  ```
-	  or use 
-	  
-	  ```shell
+	-
+	- remove changes in file
+	- ```shell
 	  git restore [file path/filename]
 	  ```
 	- ignore file create file .gitignore
@@ -64,5 +64,10 @@
 	  
 	  ```shell
 	  git commit -m "[message for all files]"
+	  ```
+	- Review the changes 
+	  
+	  ```shell
+	  git diff
 	  ```
 	-
