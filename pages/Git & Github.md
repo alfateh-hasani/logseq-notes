@@ -27,4 +27,15 @@
 	  ```shell
 	  git init	
 	  ```
--
+- ## git commands
+	- ### git status of files
+	  
+	  ```shell
+	  git status
+	  ```
+	- track file
+	  
+	  ```shell
+	  git add [file path/filename]
+	  ```
+	-
