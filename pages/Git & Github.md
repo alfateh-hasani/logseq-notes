@@ -106,15 +106,25 @@
 		  ```shell
 		  git branch [name]
 		  ```
-		- switch between branches
+		- switch between branches & create
 		  
 		  ```shell
 		  git switch [name]
+		  
+		  # create and switch
+		  git switch -c [name]
 		  ```
+		-
+		-
 		- Merge changes from branch to current branch
 		  
 		  ```shell
 		  git merge -m "[Message of merge]"
+		  ```
+		- Delete branch
+		  
+		  ```shell
+		  git branch -d [name]
 		  ```
 		-
 		-
