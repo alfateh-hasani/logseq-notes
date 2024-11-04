@@ -96,11 +96,23 @@
 	  git reset [hash code of commit from log]
 	  ```
 	- ### Branches
-		- create branche
+		- Active branch
+		  
+		  ```shell
+		  git branch
+		  ```
+		- create branch
 		  
 		  ```shell
 		  git branch [name]
 		  ```
+		- switch between branches
+		  
+		  ```shell
+		  git switch [name]
+		  ```
+		-
+		-
 		-
 - ## Advaced commands
 	- ### Rebase (Change order, merge, squash, ...) commits 
