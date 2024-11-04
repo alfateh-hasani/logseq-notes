@@ -119,7 +119,12 @@
 		  ```shell
 		  git merge -m "[Message of merge]"
 		  ```
-		- Merge if there is conflicts :- =
+		- Merge if there is conflicts
+		  
+		  ```shell
+		  // solve it manually then commit it
+		  git commit -a -m "[Message of merge after solving confilect]"
+		  ```
 		- Delete branch
 		  
 		  ```shell
