@@ -1,0 +1,28 @@
+## What is a Database?
+	- A database is a structured collection of data that is organized and stored in a way that facilitates efficient retrieval, manipulation, and management
+- ## What is a Relational Database?
+	- A relational database is a type of database that organizes data into tables (relations) with rows (records) and columns (fields).
+- ## RDBMS
+	- A Relational Database Management System (RDBMS) is a software application designed to create, manage, and interact with relational databases.
+	- F.X: MySQL, PostgreSQL, Oracle, and Microsoft SQL Server
+- ## Introduction to SQL
+	- SQL (Structured Query Language) is the standard programming language used to interact with relational databases. It allows you to create, read, update, and delete data within the database, as well as define and modify the database structure itself. SQL is like a universal language that enables you to communicate with different RDBMS platforms.
+- ## Naming Conventions
+	- In SQL, following consistent naming conventions is crucial for clarity and maintainability
+- ## What is Database Design?
+	- Database design is the process of creating an efficient and organized structure for storing and managing data in a database.
+- ## Data Integrity
+	- Data integrity refers to the accuracy, consistency, and reliability of data stored in a database.
+	- **Entity Integrity**: Ensures each row in a table is uniquely identifiable by a primary key, and the primary key cannot have null values.
+	- **Referential Integrity**: Maintains relationships between tables by ensuring foreign key values in one table match the primary key values in another table.
+	- **Domain Integrity**: Enforces valid entries for a given column by restricting the data type, format, and range of values that can be stored.
+- ## Atomic Values
+	- In database design, it's important to store atomic values, which means storing the smallest pieces of information that cannot be further divided. This principle helps maintain data integrity and avoid redundancy.
+- ## Introduction to Keys
+	- Keys are essential components in database design that help ensure data integrity and establish relationships between tables.
+- ## Primary Key Index
+	- A primary key is a column or a combination of columns that uniquely identifies each record in a table.
+- ## Look up Table
+	- like Categories -> products
+	- A lookup table, also known as a reference table or a code table, is a table that contains predefined sets of values that can be used to populate columns in other tables.
+-
