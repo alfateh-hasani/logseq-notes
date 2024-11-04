@@ -114,13 +114,12 @@
 		  # create and switch
 		  git switch -c [name]
 		  ```
-		-
-		-
 		- Merge changes from branch to current branch
 		  
 		  ```shell
 		  git merge -m "[Message of merge]"
 		  ```
+		- Merge if there is conflicts :- =
 		- Delete branch
 		  
 		  ```shell
