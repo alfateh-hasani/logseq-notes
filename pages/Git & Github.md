@@ -33,51 +33,55 @@
 	  ```shell
 	  git status
 	  ```
-	- track file (Stagin)
+	- ### track file (Stagin)
 	  
 	  ```shell
 	  git add [file path/filename]
 	  ```
-	- track all files (Staging)
+	- ### track all files (Staging)
 	  
 	  ```shell
 	  git all .
 	  ```
-	- untrack file
+	- ### untrack file
 	  
 	  ```shell
 	  git rm --cached [file path/filename]
 	  ```
-	- remove from staging
+	- ### remove from staging
 	  
 	  ```shell
 	  git restore --staged [file path/ filename]
 	  ```
-	- remove changes in file
-	- ```shell
+	- ### remove changes in file
+	  ```shell
 	  git restore [file path/filename]
 	  ```
-	- ignore file create file .gitignore
+	- ### ignore file create file .gitignore
 	  both ways are correct
 	  
 	  ```shell
 	  # ignore all .txt files
 	  *.txt
 	  ```
-	- to commit all tracked files
+	- ### to commit all tracked files
 	  
 	  ```shell
 	  git commit -m "[message for all files]"
 	  ```
-	- Review the changes 
+	- ### Review the changes 
 	  
 	  ```shell
 	  git diff
 	  ```
-	- Stage and commit 
+	- ### Stage and commit 
 	  
 	  ```shell
 	  git commit -a -m "[message for all files]"
 	  ```
 - ## general command
-	- ### git rm "[]"
+	- ### remove file
+	  
+	  ```shell
+	  git rm "[file path/filename]"
+	  ```
