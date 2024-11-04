@@ -85,3 +85,8 @@
 	  ```shell
 	  git rm "[file path/filename]"
 	  ```
+	- Move or rename file
+	  
+	  ```shell
+	  git mv "[file path/filename old]" "[file path/filename new]"
+	  ```
