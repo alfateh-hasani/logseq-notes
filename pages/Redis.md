@@ -611,3 +611,65 @@
 	      }
 	  }
 	  ```
+- ## 11. Redis Session Management
+  
+  Handle user sessions with Redis.
+- ```php
+  class RedisSessionManager
+  {
+      private $redis;
+      private $sessionLifetime = 3600; // 1 hour
+  
+      public function __construct()
+      {
+          $this->redis = Redis::connection();
+      }
+  
+      public function createSession($userId, $data)
+      {
+          $sessionId = $this->generateSessionId();
+          $sessionData = [
+              'user_id' => $userId,
+              'data' => $data,
+              'created_at' => time()
+          ];
+  
+          $this->redis->setex(
+              "session:$sessionId", 
+              $this->sessionLifetime, 
+              json_encode($sessionData)
+          );
+  
+          return $sessionId;
+      }
+  
+      public function getSession($sessionId)
+      {
+          $session = $this->redis->get("session:$sessionId");
+          return $session ? json_decode($session, true) : null;
+      }
+  
+      public function updateSession($sessionId, $data)
+      {
+          $session = $this->getSession($sessionId);
+          if ($session) {
+              $session['data'] = array_merge($session['data'], $data);
+              $this->redis->setex(
+                  "session:$sessionId",
+                  $this->sessionLifetime,
+                  json_encode($session)
+              );
+          }
+      }
+  
+      public function destroySession($sessionId)
+      {
+          $this->redis->del("session:$sessionId");
+      }
+  
+      private function generateSessionId()
+      {
+          return bin2hex(random_bytes(32));
+      }
+  }
+  ```
