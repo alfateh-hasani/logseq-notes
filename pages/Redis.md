@@ -247,3 +247,111 @@
 	      }
 	  }
 	  ```
+- ## 5. Hashes (Maps between string fields and values)
+	- ```php
+	  class RedisHashExample
+	  {
+	      private $redis;
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      public function hashOperations()
+	      {
+	          // Set hash fields
+	          $this->redis->hset('user:1', 'name', 'John Doe');
+	          $this->redis->hset('user:1', 'email', 'john@example.com');
+	  
+	          // Set multiple hash fields
+	          $this->redis->hmset('user:2', [
+	              'name' => 'Jane Doe',
+	              'email' => 'jane@example.com',
+	              'age' => 25
+	          ]);
+	  
+	          // Get hash field
+	          $name = $this->redis->hget('user:1', 'name');
+	  
+	          // Get all hash fields
+	          $userData = $this->redis->hgetall('user:1');
+	  
+	          // Check if field exists
+	          $exists = $this->redis->hexists('user:1', 'email');
+	  
+	          // Delete field
+	          $this->redis->hdel('user:1', 'age');
+	  
+	          // Increment numeric field
+	          $this->redis->hincrby('user:2', 'age', 1);
+	      }
+	  
+	      // Example: Shopping Cart Implementation
+	      public function addToCart($userId, $productId, $quantity)
+	      {
+	          $cartKey = "cart:$userId";
+	          $this->redis->hset($cartKey, $productId, $quantity);
+	      }
+	  
+	      public function getCart($userId)
+	      {
+	          return $this->redis->hgetall("cart:$userId");
+	      }
+	  
+	      public function updateQuantity($userId, $productId, $quantity)
+	      {
+	          $cartKey = "cart:$userId";
+	          $this->redis->hset($cartKey, $productId, $quantity);
+	      }
+	  
+	      public function removeFromCart($userId, $productId)
+	      {
+	          $cartKey = "cart:$userId";
+	          $this->redis->hdel($cartKey, $productId);
+	      }
+	  }
+	  ```
+- ##
+- ## 6. Redis Pub/Sub (Publisher/Subscriber)
+  
+  This is great for real-time features like notifications, chat systems, etc.
+	- ```php
+	  class RedisPubSubExample
+	  {
+	      private $redis;
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      // Publisher
+	      public function publishNotification($channel, $message)
+	      {
+	          $this->redis->publish($channel, json_encode($message));
+	      }
+	  
+	      // Subscriber
+	      public function subscribeToChannel($channel)
+	      {
+	          $this->redis->subscribe([$channel], function ($message) {
+	              // Handle message
+	              $data = json_decode($message);
+	              // Process notification...
+	          });
+	      }
+	  
+	      // Example: Real-time Notification System
+	      public function sendUserNotification($userId, $message)
+	      {
+	          $notification = [
+	              'userId' => $userId,
+	              'message' => $message,
+	              'timestamp' => time()
+	          ];
+	          
+	          $this->publishNotification("user.notifications.$userId", $notification);
+	      }
+	  }
+	  ```
