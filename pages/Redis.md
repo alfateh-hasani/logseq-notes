@@ -472,3 +472,142 @@
 	      }
 	  }
 	  ```
+- ## 9. Redis Queue Implementation
+  
+  Implementing a robust queue system with Redis.
+	- ```php
+	  class RedisQueue
+	  {
+	      private $redis;
+	      private $defaultTimeout = 30; // seconds
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      public function push($queue, $job)
+	      {
+	          $payload = json_encode([
+	              'id' => uniqid(),
+	              'job' => $job,
+	              'attempts' => 0,
+	              'created_at' => time()
+	          ]);
+	  
+	          $this->redis->rpush("queue:$queue", $payload);
+	      }
+	  
+	      public function pop($queue)
+	      {
+	          // Move job from waiting to processing list
+	          $payload = $this->redis->blpop("queue:$queue", $this->defaultTimeout);
+	          
+	          if (!$payload) {
+	              return null;
+	          }
+	  
+	          $job = json_decode($payload[1], true);
+	          $job['attempts']++;
+	  
+	          // Add to processing set with expiration
+	          $processingKey = "processing:$queue:{$job['id']}";
+	          $this->redis->setex($processingKey, 3600, json_encode($job));
+	  
+	          return $job;
+	      }
+	  
+	      public function complete($queue, $jobId)
+	      {
+	          $this->redis->del("processing:$queue:$jobId");
+	      }
+	  
+	      public function retry($queue, $job)
+	      {
+	          if ($job['attempts'] < 3) {
+	              $this->push($queue, $job['job']);
+	          } else {
+	              $this->failed($queue, $job);
+	          }
+	      }
+	  
+	      public function failed($queue, $job)
+	      {
+	          $this->redis->rpush("failed:$queue", json_encode($job));
+	      }
+	  
+	      // Example: Job Processing
+	      public function processJobs($queue)
+	      {
+	          while (true) {
+	              $job = $this->pop($queue);
+	              
+	              if ($job) {
+	                  try {
+	                      // Process job
+	                      $this->processJob($job);
+	                      
+	                      // Mark as complete
+	                      $this->complete($queue, $job['id']);
+	                  } catch (\Exception $e) {
+	                      // Handle failure
+	                      $this->retry($queue, $job);
+	                  }
+	              }
+	          }
+	      }
+	  }
+	  ```
+- ## 10. Redis Rate Limiting
+  
+  Implement rate limiting for APIs or actions.
+	- ```php
+	  class RedisRateLimiter
+	  {
+	      private $redis;
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      public function isAllowed($key, $maxAttempts, $window)
+	      {
+	          $current = $this->redis->get($key);
+	  
+	          if (!$current) {
+	              $this->redis->setex($key, $window, 1);
+	              return true;
+	          }
+	  
+	          if ($current < $maxAttempts) {
+	              $this->redis->incr($key);
+	              return true;
+	          }
+	  
+	          return false;
+	      }
+	  
+	      // Example: API Rate Limiting
+	      public function limitApiRequests($userId, $endpoint)
+	      {
+	          $key = "ratelimit:api:{$userId}:{$endpoint}";
+	          
+	          // Allow 100 requests per minute
+	          if (!$this->isAllowed($key, 100, 60)) {
+	              throw new TooManyRequestsException();
+	          }
+	      }
+	  
+	      // Example: Login Attempts
+	      public function limitLoginAttempts($userId)
+	      {
+	          $key = "ratelimit:login:$userId";
+	          
+	          // Allow 5 attempts per 15 minutes
+	          if (!$this->isAllowed($key, 5, 900)) {
+	              throw new AccountLockedException();
+	          }
+	      }
+	  }
+	  ```
