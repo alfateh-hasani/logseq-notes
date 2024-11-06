@@ -1,4 +1,5 @@
 - [[Elequant]]
+- [[Redis]]
 - ## Libraries
 	- Laravel-medialibrary
 	  ```
