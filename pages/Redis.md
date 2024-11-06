@@ -355,3 +355,120 @@
 	      }
 	  }
 	  ```
+- ## 7. Redis Transactions
+  
+  Transactions ensure multiple commands are executed atomically.
+	- ```php
+	  class RedisTransactionExample
+	  {
+	      private $redis;
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      public function transferPoints($fromUser, $toUser, $points)
+	      {
+	          $this->redis->multi(); // Start transaction
+	  
+	          try {
+	              // Deduct points from sender
+	              $this->redis->decrby("user:$fromUser:points", $points);
+	              
+	              // Add points to receiver
+	              $this->redis->incrby("user:$toUser:points", $points);
+	              
+	              // Log transaction
+	              $this->redis->rpush('points:transactions', json_encode([
+	                  'from' => $fromUser,
+	                  'to' => $toUser,
+	                  'points' => $points,
+	                  'timestamp' => time()
+	              ]));
+	  
+	              $this->redis->exec(); // Execute transaction
+	              return true;
+	          } catch (\Exception $e) {
+	              $this->redis->discard(); // Rollback transaction
+	              return false;
+	          }
+	      }
+	  }
+	  ```
+- ## 8. Redis Cache Implementation
+  
+  Advanced caching strategies with Redis.
+	- ```php
+	  class RedisCacheManager
+	  {
+	      private $redis;
+	      private $defaultTTL = 3600; // 1 hour
+	  
+	      public function __construct()
+	      {
+	          $this->redis = Redis::connection();
+	      }
+	  
+	      public function remember($key, $callback, $ttl = null)
+	      {
+	          $value = $this->redis->get($key);
+	  
+	          if (!is_null($value)) {
+	              return unserialize($value);
+	          }
+	  
+	          $value = $callback();
+	          $this->put($key, $value, $ttl);
+	  
+	          return $value;
+	      }
+	  
+	      public function put($key, $value, $ttl = null)
+	      {
+	          $ttl = $ttl ?? $this->defaultTTL;
+	          $this->redis->setex($key, $ttl, serialize($value));
+	      }
+	  
+	      public function forget($key)
+	      {
+	          $this->redis->del($key);
+	      }
+	  
+	      public function flush()
+	      {
+	          $this->redis->flushdb();
+	      }
+	  
+	      // Example: Caching Product Data
+	      public function getProduct($productId)
+	      {
+	          $cacheKey = "product:$productId";
+	          
+	          return $this->remember($cacheKey, function () use ($productId) {
+	              return Product::with('categories', 'attributes')
+	                           ->find($productId);
+	          }, 3600);
+	      }
+	  
+	      // Example: Cache Tags Implementation
+	      public function taggedCache($tags, $key, $callback, $ttl = null)
+	      {
+	          // Store tagged cache references
+	          foreach ($tags as $tag) {
+	              $this->redis->sadd("tag:$tag", $key);
+	          }
+	  
+	          return $this->remember($key, $callback, $ttl);
+	      }
+	  
+	      public function flushTag($tag)
+	      {
+	          $keys = $this->redis->smembers("tag:$tag");
+	          if (!empty($keys)) {
+	              $this->redis->del($keys);
+	              $this->redis->del("tag:$tag");
+	          }
+	      }
+	  }
+	  ```
