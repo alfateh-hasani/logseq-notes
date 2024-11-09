@@ -101,11 +101,24 @@
 		      }
 		  }
 		  ```
+	- Git Google credentials
+		- [Google console](https://console.developers.google.com/)
 	- setup .env
 	  
 	  ```.env
 	  GOOGLE_DRIVE_CLIENT_ID=xxx.apps.googleusercontent.com
-	  GOOGLE_DRIVE_CLIENT_SECRET=
-	  GOOGLE_DRIVE_REFRESH_TOKEN=
-	  GOOGLE_DRIVE_FOLDER=
+	  GOOGLE_DRIVE_CLIENT_SECRET=xxx
+	  GOOGLE_DRIVE_REFRESH_TOKEN=xxx
+	  GOOGLE_DRIVE_FOLDER="[path to folder in google drive F.X "Aosan Project/Backups"]"
+	  ```
+	- filesystem.php setup
+	  
+	  ```php
+	  'google' => [
+	          'driver' => 'google',
+	          'clientId' => env('GOOGLE_DRIVE_CLIENT_ID'),
+	          'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET'),
+	          'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN'),
+	          'folder' => env('GOOGLE_DRIVE_FOLDER'),
+	      ],
 	  ```
