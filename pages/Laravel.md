@@ -2,7 +2,7 @@
 - [[Redis]]
 - [[Backup]]
 - ## Libraries
-	- Laravel-medialibrary
+	- Laravel-media library
 	  ```
 	  composer require "spatie/laravel-medialibrary"
 	  ```
