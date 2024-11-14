@@ -60,7 +60,11 @@
 			          ->nonQueued();
 			  }
 			  ```
--
+	- ### Add Images
+		- From Request
+			- ```php
+			  $yourModel->addMediaFromRequest('image')->toMediaCollection('images');
+			  ```
 -
 -
 - ## Note
