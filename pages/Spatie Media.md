@@ -18,3 +18,37 @@
 		  ```shell
 		  php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="medialibrary-config"
 		  ```
+	- ## Disk:
+		- If you want to change default public disk
+		- add disk to config/filesystem.php
+		  ```php
+		  'media' => [
+		    	'driver' => 'local',
+		    	'root'   => public_path('media'),
+		    	'url'    => env('APP_URL').'/media',
+		  ],
+		  ```
+		- add disk name to config/media-library.php
+		  ```php
+		  'disk_name' => 'media',
+		  ```
+- ## Usage
+	- ### Prepare Model
+		- Implement HasMedia, use trait InteractWithMedia
+		- ```php
+		  namespace App\Models;
+		  
+		  use Illuminate\Database\Eloquent\Model;
+		  use Spatie\MediaLibrary\HasMedia;
+		  use Spatie\MediaLibrary\InteractsWithMedia;
+		  
+		  class YourModel extends Model implements HasMedia
+		  {
+		      use InteractsWithMedia;
+		  }
+		  ```
+- ## Note
+	- If you change the disk and using Git, So add it to .gitignore
+	  
+	  ```.gitignore
+	  ```
