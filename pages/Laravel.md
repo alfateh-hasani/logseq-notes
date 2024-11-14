@@ -1,11 +1,9 @@
 - [[Elequant]]
 - [[Redis]]
 - [[Backup]]
+- [[Libs]]
 - ## Libraries
-	- Laravel-media library [[Spatie Media]]
-	  ```
-	  composer require "spatie/laravel-medialibrary"
-	  ```
+	- Laravel-media library
 -
 - Install Laravel Globally
   composer global require laravel/installer
