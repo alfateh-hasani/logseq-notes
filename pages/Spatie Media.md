@@ -35,18 +35,34 @@
 - ## Usage
 	- ### Prepare Model
 		- Implement HasMedia, use trait InteractWithMedia
-		- ```php
-		  namespace App\Models;
-		  
-		  use Illuminate\Database\Eloquent\Model;
-		  use Spatie\MediaLibrary\HasMedia;
-		  use Spatie\MediaLibrary\InteractsWithMedia;
-		  
-		  class YourModel extends Model implements HasMedia
-		  {
-		      use InteractsWithMedia;
-		  }
-		  ```
+			- ```php
+			  namespace App\Models;
+			  
+			  use Illuminate\Database\Eloquent\Model;
+			  use Spatie\MediaLibrary\HasMedia;
+			  use Spatie\MediaLibrary\InteractsWithMedia;
+			  
+			  class YourModel extends Model implements HasMedia
+			  {
+			      use InteractsWithMedia;
+			  }
+			  ```
+		- If you want to generate thumbnails, add this to model
+			- ```php
+			  use Spatie\Image\Enums\Fit;
+			  use Spatie\MediaLibrary\MediaCollections\Models\Media;
+			  
+			  public function registerMediaConversions(?Media $media = null): void
+			  {
+			      $this
+			          ->addMediaConversion('preview')
+			          ->fit(Fit::Contain, 300, 300)
+			          ->nonQueued();
+			  }
+			  ```
+-
+-
+-
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
