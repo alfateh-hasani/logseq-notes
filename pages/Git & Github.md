@@ -151,3 +151,16 @@
 	  ```
 - ## Github
 	- create new repository
+	- connect new repository from local
+		- ```shell
+		  git init
+		  git add README.md
+		  git commit -m "first commit"
+		  git branch -M main
+		  git remote add origin "[URL]"
+		  git push -u origin main
+		  ```
+	- connect an existing repository
+		- ```shell
+		  git remote add origin
+		  ```
