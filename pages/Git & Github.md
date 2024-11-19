@@ -186,4 +186,8 @@
 		- can assign the pull request to an assigned issue
 		- after confirming the pull request, also the issue will be closed
 	- ### Actions
-	-
+	- ### Releases
+		- in Code tab
+		- New Release
+			- Tag
+			- Release Title
