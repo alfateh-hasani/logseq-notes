@@ -100,6 +100,12 @@
 	  ```shell
 	  git reset [hash code of commit from log]
 	  ```
+	- Push
+		- push all branches
+		  
+		  ```shell
+		  git push --all
+		  ```
 	- ### Branches
 		- Active branch
 		  
