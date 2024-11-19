@@ -182,4 +182,8 @@
 		- can Add labels to Issues {Bug, Documentation, Duplicate, ...}
 		- Can add comments for an issue
 	- Pull Request
-		- after creating new branch and commit changes
+		- after creating new branch and commit changes then it will be under review to merge with main branch
+		- can assign the pull request to an assigned issue
+		- after confirming the pull request, also the issue will be closed
+	- ### Actions
+	-
