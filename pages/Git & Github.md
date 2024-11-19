@@ -106,6 +106,20 @@
 		  ```shell
 		  git push --all
 		  ```
+	- ### Fetch
+		- download all history and branches from remote
+		- ```shell
+		  git fetch
+		  ```
+		- then can merge to local
+			- ```shell
+			  git merge
+			  ```
+	- ### Pull
+		- To fetch and merge
+		- ```shell
+		  git pull 
+		  ```
 	- ### Branches
 		- Active branch
 		  
