@@ -162,5 +162,7 @@
 		  ```
 	- connect an existing repository
 		- ```shell
-		  git remote add origin
+		  git remote add origin "[URL]"
+		  git branch -M main
+		  git push -u origin main
 		  ```
