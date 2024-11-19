@@ -177,3 +177,7 @@
 		  git branch -M main
 		  git push -u origin main
 		  ```
+	- ### Issues
+		- here can create issue and assign it to member then can track the progress of it
+		- can Add labels to Issues {Bug, Documentation, Duplicate, ...}
+		- Can add comments for an issue
