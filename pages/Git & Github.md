@@ -79,6 +79,11 @@
 	  ```shell
 	  git commit -a -m "[message for all files]"
 	  ```
+	- Uncommit last commit and return changes to Staged
+	  
+	  ```shell
+	  git reset --soft HEAD~1
+	  ```
 	- ### Review Log , blog as one line
 	  
 	  ```git log
