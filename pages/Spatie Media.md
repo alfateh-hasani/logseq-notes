@@ -65,7 +65,20 @@
 			- ```php
 			  $yourModel->addMediaFromRequest('image')->toMediaCollection('images');
 			  ```
--
+		- From Path copy not move (preservingOriginal)
+			- ```php
+			  $yourModel
+			     ->addMedia($pathToFile)
+			     ->preservingOriginal()
+			     ->toMediaCollection();
+			  ```
+		- From URL
+			- ```php
+			  $url = 'http://medialibrary.spatie.be/assets/images/mountain.jpg';
+			  $yourModel
+			     ->addMediaFromUrl($url)
+			     ->toMediaCollection();
+			  ```
 -
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
