@@ -108,6 +108,7 @@
 		- retrieve images by collections
 		- ```php
 		  Model::last()->getMedia('collection name');
+		  Model::last()->getFirstMedia('collection name');	
 		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
