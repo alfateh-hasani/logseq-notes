@@ -93,9 +93,13 @@
 			  ```
 	- ### Deleting Images
 		- ```php
-		  
+		  Model::all()->each->delete();
+		  Model::last()->delete();
 		  ```
--
+		- Wrong usage
+		- ```php
+		  Model::where('category_id',1)->delete();
+		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
