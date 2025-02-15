@@ -121,6 +121,20 @@
 		  $media = Model::last()->getMedia();
 		  return $media;
 		  ```
+		- Download many files
+		- ```php
+		  Media::truncate();
+		  
+		  Model::create()
+		    ->addMedia(storage_path('path'))
+		    ->toMediaCollection();
+		  
+		  Model::create()
+		    ->addMedia(storage_path('path'))
+		    ->toMediaCollection('downloads', 's3');
+		  
+		  return MediaStream::create('file name.zip')->addMedia(Media::all());
+		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
