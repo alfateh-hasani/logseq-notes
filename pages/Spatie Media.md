@@ -84,7 +84,18 @@
 			  ->usingName('normal name field')
 			  ->usingFileName('file name with extention')
 			  ```
-			- add custom properties like asocians
+			- add custom properties like association array
+			- ```php
+			  ->withCustomProperties([
+			    'location' => 'Dublin, Ireland',
+			    'subject' => 'Library',
+			  ])
+			  ```
+	- ### Deleting Images
+		- ```php
+		  
+		  ```
+-
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
