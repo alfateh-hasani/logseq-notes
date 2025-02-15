@@ -103,7 +103,11 @@
 	- ### Collections
 		- Add to collection
 		- ```php
-		  ->toMediaCollection('')
+		  ->toMediaCollection('collection name')
+		  ```
+		- retrieve images by collections
+		- ```php
+		  Model::last()->getMedia('collection name');
 		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
