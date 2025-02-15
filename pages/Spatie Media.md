@@ -65,11 +65,10 @@
 			- ```php
 			  $yourModel->addMediaFromRequest('image')->toMediaCollection('images');
 			  ```
-		- From Path copy not move (preservingOriginal)
+		- From Path
 			- ```php
 			  $yourModel
 			     ->addMedia($pathToFile)
-			     ->preservingOriginal()
 			     ->toMediaCollection();
 			  ```
 		- From URL
@@ -79,7 +78,9 @@
 			     ->addMediaFromUrl($url)
 			     ->toMediaCollection();
 			  ```
--
+		- Adding properties
+			- ```php
+			  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
