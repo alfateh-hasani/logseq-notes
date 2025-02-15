@@ -63,20 +63,20 @@
 	- ### Add Images
 		- From Request
 			- ```php
-			  $yourModel->addMediaFromRequest('image')->toMediaCollection('images');
+			  $yourModel->addMediaFromRequest('image')->toMediaLibrary();
 			  ```
 		- From Path
 			- ```php
 			  $yourModel
 			     ->addMedia($pathToFile)
-			     ->toMediaCollection();
+			     ->toMediaLibrary();
 			  ```
 		- From URL
 			- ```php
 			  $url = 'http://medialibrary.spatie.be/assets/images/mountain.jpg';
 			  $yourModel
 			     ->addMediaFromUrl($url)
-			     ->toMediaCollection();
+			     ->toMediaLibrary();
 			  ```
 		- Adding properties
 			- using name, using file name
