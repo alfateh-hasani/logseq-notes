@@ -100,6 +100,11 @@
 		- ```php
 		  Model::where('category_id',1)->delete();
 		  ```
+	- ### Collections
+		- Add to collection
+		- ```php
+		  ->toMediaCollection('')
+		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
