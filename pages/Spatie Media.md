@@ -115,6 +115,12 @@
 		  Model::last()->getMedia('collection name');
 		  Model::last()->getFirstMedia('collection name');	
 		  ```
+	- Download File
+		- When return it change to http response to be downloadable
+		- ```php
+		  $media = Model::last()->getMedia();
+		  return $media;
+		  ```
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
