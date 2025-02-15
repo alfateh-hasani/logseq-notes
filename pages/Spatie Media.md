@@ -79,8 +79,12 @@
 			     ->toMediaCollection();
 			  ```
 		- Adding properties
+			- using name, using file name
 			- ```php
+			  ->usingName('normal name field')
+			  ->usingFileName('file name with extention')
 			  ```
+			- add custom properties like asocians
 - ## Note
 	- If you change the disk and using Git, So add it to .gitignore
 	  
