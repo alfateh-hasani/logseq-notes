@@ -117,6 +117,16 @@
 		  ```
 		- Register collection in model
 		- ```php
+		  public function registerMediaCollections():void
+		  {
+		    $this
+		      ->addMediaCollection('big-files')
+		      ->useDisk('s3')   // to add file to sepecifc disk like s3
+		      ->singleFile()    // to have one file in this collection
+		      ->acceptsFile(function(File $file){
+		        return $file->mimeType === 'image/jpeg';
+		      })
+		  }
 		  ```
 	- Download File
 		- When return it change to http response to be downloadable
