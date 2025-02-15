@@ -115,6 +115,9 @@
 		  Model::last()->getMedia('collection name');
 		  Model::last()->getFirstMedia('collection name');	
 		  ```
+		- Register collection in model
+		- ```php
+		  ```
 	- Download File
 		- When return it change to http response to be downloadable
 		- ```php
