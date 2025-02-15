@@ -105,6 +105,11 @@
 		- ```php
 		  ->toMediaCollection('collection name')
 		  ```
+		- Add to other disk
+		- ```php
+		  ->toMediaCollection('collection name', 'disk name');
+		  ->toMediaCollection('', 's3')
+		  ```
 		- retrieve images by collections
 		- ```php
 		  Model::last()->getMedia('collection name');
